@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1536173347 source:/home/facundo_fernandez/tp_laboratorio_1/trabajoPractico_1/main.c
+	<stdio_ext.h>
+	<stdlib.h>
+	"utn.h"
+
+1536173167 /home/facundo_fernandez/tp_laboratorio_1/trabajoPractico_1/utn.h
+
+1536176689 source:/home/facundo_fernandez/tp_laboratorio_1/trabajoPractico_1/utn.c
+	<stdio_ext.h>
+	<stdlib.h>
+	"utn.h"
+
