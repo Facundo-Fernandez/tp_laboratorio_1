@@ -109,7 +109,7 @@ float utn_factorial(float number)
 }
 
 /**
-*@brief Calcula los factoriales de dos operandos.
+*@brief Calcula los factoriales de dos operandos y los muestra mediante un printf.
 *@param primerOperando Es el primer operando que se ingresó.
 *@param segundoOperando Es el segundo operando que se ingresó.
 */
