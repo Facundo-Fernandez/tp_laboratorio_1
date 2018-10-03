@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1538604527 source:/home/facundo_fernandez/tp_laboratorio_1/trabajoPractico_2/main.c
+1538604643 source:/home/facundo_fernandez/tp_laboratorio_1/trabajoPractico_2/main.c
 	<stdio_ext.h>
 	<stdlib.h>
 	<string.h>
@@ -9,14 +9,14 @@
 
 1538087820 /home/facundo_fernandez/tp_laboratorio_1/trabajoPractico_2/utn.h
 
-1538602967 /home/facundo_fernandez/tp_laboratorio_1/trabajoPractico_2/tp2.h
+1538605501 /home/facundo_fernandez/tp_laboratorio_1/trabajoPractico_2/tp2.h
 	<stdio_ext.h>
 	<stdlib.h>
 	<string.h>
 	<unistd.h>
 	"utn.h"
 
-1538603788 source:/home/facundo_fernandez/tp_laboratorio_1/trabajoPractico_2/tp2.c
+1538606127 source:/home/facundo_fernandez/tp_laboratorio_1/trabajoPractico_2/tp2.c
 	<stdio_ext.h>
 	<stdlib.h>
 	<string.h>
