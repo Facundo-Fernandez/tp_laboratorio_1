@@ -16,7 +16,7 @@ int main()
     //Code
     printf("manpowerOrganizer v0.1\n\n");
     initEmployees(listaDeEmpleados, MAX_EMPLOYEES);
-    menu:
+menu:
     printf("\n-------------------------------- Menu principal --------------------------------\n\n");
     printf("Seleccione la opción que desea llevar a cabo:\n\n1) Alta de empleado\n2) Modificar datos de empleado\n3) Baja de empleado\n4) Informar\n\nOpción elegida: ");
     scanf("%d", &selectedOption);
@@ -69,5 +69,19 @@ int main()
     default:
         printf("\n%d no es una opción valida.\n", selectedOption);
     }
-    goto menu;
+finDeOperacion:
+    printf("\n\n¿Desea realizar otra accion?\n1)Si\n2)No\n\nElección: ");
+    scanf("%d", &selectedOption);
+    switch (selectedOption)
+    {
+        case 1:
+            goto menu;;
+            break;
+        case 2:
+            return(0);
+            break;
+        default:
+            printf("\nERROR. La opcion ingresada no corresponde a una operación valida.\n");
+            goto finDeOperacion;
+    }
 }

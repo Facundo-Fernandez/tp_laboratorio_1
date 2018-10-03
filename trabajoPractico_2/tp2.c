@@ -6,6 +6,11 @@
 #include "tp2.h"
 
 //2.1 initEmployees
+/**
+*@brief Inicializa el array de empleados, cambiando el estado del flag <isEmpty> a <true>.
+*@param employeeList Es el array de estructuras de empleados
+*@param length La maxima cantidad de empleados
+*/
 void initEmployees(Employee* employeeList, int length)
 {
     int i;
@@ -21,6 +26,11 @@ void initEmployees(Employee* employeeList, int length)
     }
 }
 
+/**
+*@brief Denota la posicion del proximo slot libre en el array
+*@param employeeList Es el array de estructuras de empleados
+*@return Retorna la id del proximo slot vacio del array, en caso de que no lo haya retorna -1
+*/
 //2.2 addEmployees
 int nextEmptySlot(Employee* employeeList)
 {
@@ -46,6 +56,12 @@ int generateID (void)
     return (iD);
 }
 
+/**
+*@brief Da de alta un empleado, pidiendole al usuario que ingrese los datos del mismo y otorgandole una ID unica.
+*@param employeeList Es el array de estructuras de empleados
+*@param length La maxima cantidad de empleados
+*@return Retorna 0 si pudo agregar los datos sin problemas, caso contrario denota -1
+*/
 int addEmployees (Employee* employeesList, int eLength)
 {
     int position = nextEmptySlot(employeesList);
@@ -81,27 +97,13 @@ int addEmployees (Employee* employeesList, int eLength)
     return (ret);
 }
 
-//2.3 findEmployeeById
-int findEmployeeById(Employee* employeesList, int eLength, int id)
-{
-    int i;
-    int ret = -1;
-
-    if(employeesList != NULL && eLength <= MAX_EMPLOYEES)
-    {
-        for(i=0;i<eLength; i++)
-        {
-            if(i == id)
-            {
-                ret = i;
-                break;
-            }
-        }
-    }
-    return(ret);
-}
-
 //2.4 removeEmployee
+/**
+*@brief Cambia el estado del flag <isEmpty> de la estructura de los empleados a <false>
+*@param employeeList Es el array de estructuras de empleados
+*@param length La maxima cantidad de empleados
+*@return En caso de que la operacion haya sido exitosa retorna 0, caso contrario retorna -1.
+*/
 int removeEmployee (Employee* employeesList, int eLength)
 {
     int i;
@@ -129,6 +131,12 @@ int removeEmployee (Employee* employeesList, int eLength)
 }
 
 //2.5 sortEmployees
+/**
+*@brief Ordena los empleados alfabeticamente por sus apellidos
+*@param employeeList Es el array de estructuras de empleados
+*@param length La maxima cantidad de empleados
+*@return Retorna 0 si realizó la operación correctamente, caso contrario retorna -1.
+*/
 int sortEmployees(Employee* employeesList, int eLength)
 {
     int i, j;
@@ -145,7 +153,7 @@ int sortEmployees(Employee* employeesList, int eLength)
         {
             for(j=i+1; j<MAX_EMPLOYEES; j++)
             {
-                if(employeesList[i].lastName < employeesList[j].lastName)
+                if(employeesList[i].lastName[0] < employeesList[j].lastName[0])
                 {
                     strcpy(lastNameAux,employeesList[i].lastName);
                     strcpy(employeesList[i].lastName, employeesList[j].lastName);
@@ -174,7 +182,7 @@ int sortEmployees(Employee* employeesList, int eLength)
                     ret = 0;
                 }
 
-                if(employeesList[i].lastName == employeesList[j].lastName)
+                if(employeesList[i].lastName[0] == employeesList[j].lastName[0])
                 {
                     if(employeesList[i].sector < employeesList[j].sector)
                     {
@@ -211,6 +219,11 @@ int sortEmployees(Employee* employeesList, int eLength)
     return (ret);
 }
 
+/**
+*@brief Muestra en pantalla los empleados y sus respectivos datos
+*@param employeeList Es el array de estructuras de empleados
+*@param length La maxima cantidad de empleados
+*/
 //2.6
 void printEmployees (Employee* employeesList, int eLength)
 {
@@ -226,6 +239,11 @@ void printEmployees (Employee* employeesList, int eLength)
         }
 }
 
+/**
+*@brief Pide al usuario un ID y modifica los datos del empleado correspondiente
+*@param employeeList Es el array de estructuras de empleados
+*@param length La maxima cantidad de empleados
+*/
 void modifyEmployeeInfo(Employee* employeesList, int eLength)
 {
     int i;
@@ -244,6 +262,11 @@ void modifyEmployeeInfo(Employee* employeesList, int eLength)
     }
 }
 
+/**
+*@brief Calcula un promedio del salario de todos los empleados ingresados al sistema
+*@param employeeList Es el array de estructuras de empleados
+*@param length La maxima cantidad de empleados
+*/
 void averageSalary (Employee* employeesList, int eLength)
 {
     int i;
@@ -260,5 +283,5 @@ void averageSalary (Employee* employeesList, int eLength)
         }
     }
     avgSalary = aux / qty;
-    printf("\n\nEl salario promedio de los empleados es: %.2f", avgSalary);
+    printf("\n\nEl salario promedio de los empleados es$ %.2f", avgSalary);
 }

@@ -23,7 +23,6 @@ void initEmployees(Employee* employeeList, int length);
 int nextEmptySlot(Employee* employeeList);
 int generateID (void);
 int addEmployees (Employee* employeesList, int eLength);
-int findEmployeeById(Employee* employeesList, int eLength, int id);
 int removeEmployee (Employee* employeesList, int eLength);
 int sortEmployees(Employee* employeesList, int eLength);
 void printEmployees (Employee* employeesList, int eLength);
