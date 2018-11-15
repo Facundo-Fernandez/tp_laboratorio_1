@@ -215,10 +215,8 @@ int controller_compareNames(void* primerNombre, void* segundoNombre)
 }
 
 /** \brief Ordenar empleados
- * \param path char*
  * \param pArrayListEmployee LinkedList*
  * \return Retorna 0 si la operación concluyó correctamente, caso contrario denota -1
- *
  */
 int controller_sortEmployee(LinkedList* pArrayListEmployee)
 {
@@ -233,7 +231,7 @@ int controller_sortEmployee(LinkedList* pArrayListEmployee)
     return ret ;
 }
 
-/** \brief Guarda el contenido de la LL como texto
+/**\brief Guarda el contenido de la LL como texto
  * \param pFile FILE* Puntero al archivo destino
  * \param pArrayListEmployee LinkedList* Puntero a la LL
  * \return Retorna 0 si la operación concluyó correctamente, caso contrario denota -1
@@ -271,7 +269,7 @@ int controller_saveLLAsText(FILE* pFile, LinkedList* pArrayListEmployee)
 return ret;
 }
 
-/** \brief Guarda el contenido de la LL como binario
+/**\brief Guarda el contenido de la LL como binario
  * \param pFile FILE* Puntero al archivo destino
  * \param pArrayListEmployee LinkedList* Puntero a la LL
  * \return Retorna 0 si la operación concluyó correctamente, caso contrario denota -1
@@ -301,7 +299,7 @@ int controller_saveLLAsBinary(FILE* pArchivo, LinkedList* pArrayListEmployee)
     return (ret);
 }
 
-/** \brief Guarda los datos de los empleados en el archivo data.csv (modo texto).
+/**\brief Guarda los datos de los empleados en el archivo data.csv (modo texto).
  * \param path char*
  * \param pArrayListEmployee LinkedList*
  * \return Retorna 0 si la operación concluyó correctamente, caso contrario denota -1
@@ -330,7 +328,7 @@ int controller_saveAsText(char* path , LinkedList* pArrayListEmployee)
     return ret;
 }
 
-/** \brief Guarda los datos de los empleados en el archivo data.csv (modo binario).
+/**\brief Guarda los datos de los empleados en el archivo data.csv (modo binario).
  * \param path char*
  * \param pArrayListEmployee LinkedList*
  * \return Retorna 0 si la operación concluyó correctamente, caso contrario denota -1
